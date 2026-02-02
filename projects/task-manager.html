@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Judah Ajala Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .project-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-label {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .demo-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .demo-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .task-demo {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .task-demo input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .task-item.completed {
+            opacity: 0.6;
+        }
+
+        .task-item.completed span {
+            text-decoration: line-through;
+        }
+
+        .task-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .task-actions button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .task-actions .edit {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .task-actions .delete {
+            background: #f44336;
+            color: white;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            padding: 20px;
+            background: #f5f5f5;
+            border-left: 4px solid #333;
+            border-radius: 4px;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Judah Ajala</div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="../resume.html" class="nav-link">Resume</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Detail -->
+    <section class="portfolio">
+        <div class="project-detail-container">
+            <a href="../portfolio.html" class="back-btn">← Back to Portfolio</a>
+            
+            <div class="project-header">
+                <h1>Task Manager Application</h1>
+                <p>A fully functional task management system built with vanilla HTML, CSS, and JavaScript</p>
+            </div>
+
+            <div class="project-info">
+                <div class="info-item">
+                    <div class="info-label">Technologies</div>
+                    <div class="info-value">HTML, CSS, JS</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Status</div>
+                    <div class="info-value">Completed</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Focus</div>
+                    <div class="info-value">Frontend</div>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h3>✓ Add Tasks</h3>
+                    <p>Create new tasks with a simple input interface. Tasks are added to the list in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Edit & Delete</h3>
+                    <p>Modify existing tasks or remove them from the list with dedicated action buttons.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Mark Complete</h3>
+                    <p>Check off completed tasks. The visual state updates instantly to show completion status.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Local Storage</h3>
+                    <p>Tasks persist in browser storage, so your list remains saved even after closing the page.</p>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Live Demo</h2>
+                <div class="task-demo">
+                    <input type="text" id="taskInput" placeholder="Enter a new task..." />
+                    <button onclick="addTask()" class="btn btn-primary">Add Task</button>
+                    
+                    <ul class="task-list" id="taskList">
+                        <li class="task-item">
+                            <span>Build responsive portfolio website</span>
+                            <div class="task-actions">
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                        </li>
+                        <li class="task-item completed">
+                            <span>Learn JavaScript fundamentals</span>
+                            <div class="task-actions">
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                        </li>
+                        <li class="task-item">
+                            <span>Practice CSS Grid and Flexbox</span>
+                            <div class="task-actions">
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Key Concepts Demonstrated</h2>
+                <ul style="line-height: 1.8;">
+                    <li><strong>DOM Manipulation:</strong> Dynamic creation, deletion, and modification of HTML elements</li>
+                    <li><strong>Event Handling:</strong> Click, input, and keyboard event listeners for user interactions</li>
+                    <li><strong>Local Storage API:</strong> Data persistence across browser sessions</li>
+                    <li><strong>JavaScript Functions:</strong> Modular code with add, edit, delete, and search functionality</li>
+                    <li><strong>UI/UX Design:</strong> Intuitive interface with visual feedback for user actions</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Skills Developed</h2>
+                <p>This project reinforced my understanding of:</p>
+                <ul style="line-height: 1.8;">
+                    <li>Working with form inputs and validating user data</li>
+                    <li>Creating and managing dynamic lists in the DOM</li>
+                    <li>Implementing CRUD (Create, Read, Update, Delete) operations</li>
+                    <li>Styling with CSS for a clean, professional interface</li>
+                    <li>Debugging and testing JavaScript functionality</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Judah Ajala. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/judah-ajala-894b92383" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/juddddah" target="_blank">Instagram</a>
+                <a href="https://github.com/judahajala" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        function addTask() {
+            const input = document.getElementById('taskInput');
+            if(input.value.trim() !== '') {
+                const taskList = document.getElementById('taskList');
+                const li = document.createElement('li');
+                li.className = 'task-item';
+                li.innerHTML = `
+                    <span>${input.value}</span>
+                    <div class="task-actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                `;
+                taskList.appendChild(li);
+                input.value = '';
+            }
+        }
+    </script>
+</body>
+</html>

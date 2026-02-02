@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Calculator - Judah Ajala Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .project-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .project-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-label {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .demo-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .demo-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .calculator-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .calculator {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .display {
+            background: #222;
+            color: #00ff00;
+            font-size: 2rem;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: right;
+            margin-bottom: 20px;
+            font-family: 'Courier New', monospace;
+            min-height: 60px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .calc-btn {
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .calc-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+
+        .calc-btn.operator {
+            background: rgba(255,165,0,0.7);
+        }
+
+        .calc-btn.operator:hover {
+            background: rgba(255,165,0,0.9);
+        }
+
+        .calc-btn.equals {
+            grid-column: span 2;
+            background: rgba(76,175,80,0.7);
+        }
+
+        .calc-btn.equals:hover {
+            background: rgba(76,175,80,0.9);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            padding: 20px;
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Judah Ajala</div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="../resume.html" class="nav-link">Resume</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Detail -->
+    <section class="portfolio">
+        <div class="project-detail-container">
+            <a href="../portfolio.html" class="back-btn">← Back to Portfolio</a>
+            
+            <div class="project-header">
+                <h1>Interactive Calculator</h1>
+                <p>A fully functional scientific calculator with clean UI/UX design and smooth animations</p>
+            </div>
+
+            <div class="project-info">
+                <div class="info-item">
+                    <div class="info-label">Technologies</div>
+                    <div class="info-value">HTML, CSS, JS</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Status</div>
+                    <div class="info-value">Completed</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Focus</div>
+                    <div class="info-value">UI/UX Design</div>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h3>✓ Basic Operations</h3>
+                    <p>Addition, subtraction, multiplication, and division with accurate mathematical calculations.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Real-time Display</h3>
+                    <p>Live input display with smooth number rendering and formatted output for better readability.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Clear Function</h3>
+                    <p>Quick reset to start new calculations with the clear button functionality.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Modern Design</h3>
+                    <p>Attractive gradient background with color-coded buttons for intuitive operation selection.</p>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Live Demo</h2>
+                <div class="calculator-wrapper">
+                    <div class="calculator">
+                        <div class="display" id="display">0</div>
+                        <div class="buttons">
+                            <button class="calc-btn" onclick="appendNumber('7')">7</button>
+                            <button class="calc-btn" onclick="appendNumber('8')">8</button>
+                            <button class="calc-btn" onclick="appendNumber('9')">9</button>
+                            <button class="calc-btn operator" onclick="setOperator('÷')">÷</button>
+                            
+                            <button class="calc-btn" onclick="appendNumber('4')">4</button>
+                            <button class="calc-btn" onclick="appendNumber('5')">5</button>
+                            <button class="calc-btn" onclick="appendNumber('6')">6</button>
+                            <button class="calc-btn operator" onclick="setOperator('×')">×</button>
+                            
+                            <button class="calc-btn" onclick="appendNumber('1')">1</button>
+                            <button class="calc-btn" onclick="appendNumber('2')">2</button>
+                            <button class="calc-btn" onclick="appendNumber('3')">3</button>
+                            <button class="calc-btn operator" onclick="setOperator('-')">-</button>
+                            
+                            <button class="calc-btn" onclick="appendNumber('0')" style="grid-column: span 2;">0</button>
+                            <button class="calc-btn" onclick="appendNumber('.')">.</button>
+                            <button class="calc-btn operator" onclick="setOperator('+')">+</button>
+                            
+                            <button class="calc-btn equals" onclick="calculate()">=</button>
+                            <button class="calc-btn" onclick="clearDisplay()" style="grid-column: span 2;">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-section">
+                <h2>Key Features & Implementation</h2>
+                <ul style="line-height: 1.8;">
+                    <li><strong>Display Management:</strong> Tracks current input and calculation results separately</li>
+                    <li><strong>Operator Handling:</strong> Detects mathematical operations and chains calculations</li>
+                    <li><strong>Error Prevention:</strong> Validates input to prevent invalid calculations (multiple decimals, etc.)</li>
+                    <li><strong>Visual Feedback:</strong> Button hover effects and gradient styling for modern aesthetics</li>
+                    <li><strong>Keyboard Support:</strong> Can be extended to support keyboard input for accessibility</li>
+                </ul>
+            </div>
+
+            <div class="demo-section">
+                <h2>Skills Demonstrated</h2>
+                <p>This project showcases my proficiency in:</p>
+                <ul style="line-height: 1.8;">
+                    <li>Event handling with onClick and potential keyboard event listeners</li>
+                    <li>State management for tracking numbers, operators, and results</li>
+                    <li>Mathematical expression evaluation and calculation logic</li>
+                    <li>CSS styling with gradients, transitions, and hover effects for professional UI</li>
+                    <li>Responsive design that works on different screen sizes</li>
+                    <li>Input validation and error handling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Judah Ajala. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/judah-ajala-894b92383" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/juddddah" target="_blank">Instagram</a>
+                <a href="https://github.com/judahajala" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        let display = document.getElementById('display');
+        let currentValue = '0';
+        let previousValue = '';
+        let operation = null;
+
+        function appendNumber(num) {
+            if(currentValue === '0' && num !== '.') {
+                currentValue = num;
+            } else if(!(currentValue.includes('.') && num === '.')) {
+                currentValue += num;
+            }
+            updateDisplay();
+        }
+
+        function setOperator(op) {
+            previousValue = currentValue;
+            operation = op;
+            currentValue = '0';
+        }
+
+        function calculate() {
+            if(!operation || previousValue === '') return;
+            
+            let result = 0;
+            const prev = parseFloat(previousValue);
+            const current = parseFloat(currentValue);
+            
+            switch(operation) {
+                case '+': result = prev + current; break;
+                case '-': result = prev - current; break;
+                case '×': result = prev * current; break;
+                case '÷': result = prev / current; break;
+            }
+            
+            currentValue = result.toString();
+            operation = null;
+            previousValue = '';
+            updateDisplay();
+        }
+
+        function clearDisplay() {
+            currentValue = '0';
+            previousValue = '';
+            operation = null;
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            display.textContent = currentValue;
+        }
+    </script>
+</body>
+</html>
